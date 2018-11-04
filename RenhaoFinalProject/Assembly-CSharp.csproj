@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\Units\Units.cs" />
     <Compile Include="Assets\Scripts\Utils\Builder.cs" />
     <Compile Include="Assets\Scripts\Utils\BuildLock.cs" />
+    <Compile Include="Assets\Scripts\Utils\Circle.cs" />
     <Compile Include="Assets\Scripts\Utils\GlobalSettings.cs" />
     <Compile Include="Assets\Scripts\Utils\Projectile.cs" />
     <Compile Include="Assets\Scripts\Utils\Thing.cs" />

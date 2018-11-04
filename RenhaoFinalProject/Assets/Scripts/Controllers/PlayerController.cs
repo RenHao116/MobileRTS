@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour {
         for (int i = 0; i < locks.Length; i++)
         {
             if (locks[i].identifier == s){
-                //Debug.Log("Lock "+i+" set with identifier:"+s);
+                Debug.Log("Lock "+i+" set with identifier:"+s);
                 currentLock = locks[i];
                 currentLock.isChosen = true;
             }
