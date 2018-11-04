@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{EB08FD6D-6B16-EFDA-F24A-93D2492EC1F8}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Utils/Builder.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Buildings/Buildings.cs" Line="25" Column="46" />
+      <File FileName="Assets/Scripts/Buildings/PaperBuilding.cs" Line="16" Column="18" />
+      <File FileName="Assets/Scripts/Buildings/RockBuilding.cs" Line="4" Column="32" />
+      <File FileName="Assets/Scripts/Buildings/ScissorBuilding.cs" Line="15" Column="16" />
+      <File FileName="Assets/Scripts/Buildings/Earth.cs" Line="5" Column="2" />
+      <File FileName="Assets/Scripts/Controllers/PlayerController.cs" Line="68" Column="14" />
+      <File FileName="Assets/Scripts/Utils/Builder.cs" Line="41" Column="25" />
+      <File FileName="Assets/Scripts/Utils/GlobalSettings.cs" Line="19" Column="14" />
+      <File FileName="Assets/Scripts/Units/Units.cs" Line="25" Column="56" />
+      <File FileName="Assets/Scripts/Utils/Projectile.cs" Line="30" Column="35" />
+      <File FileName="Assets/Scripts/Utils/Thing.cs" Line="91" Column="47" />
+      <File FileName="Assets/Scripts/Controllers/GameController.cs" Line="40" Column="13" />
+      <File FileName="Assets/Scripts/Buildings/GeneralBuilder.cs" Line="14" Column="23" />
+      <File FileName="Assets/Scripts/Utils/BuildLock.cs" Line="12" Column="6" />
+      <File FileName="Assets/Scripts/Camera/CameraController.cs" Line="43" Column="38" />
+      <File FileName="Assets/Scripts/Buildings/Mine.cs" Line="20" Column="74" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
