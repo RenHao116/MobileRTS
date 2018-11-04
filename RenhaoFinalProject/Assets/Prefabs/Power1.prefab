@@ -161,7 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   identifier: Power
   team: 0
-  life: 0
+  life: 200
   cost: 100
   constructionTime: 3
   visionRange: 20

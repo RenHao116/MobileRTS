@@ -165,9 +165,9 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1928782983850314, guid: 927d47eb463f34090b9366a6165a2ab7,
     type: 2}
   fireDelay: 0.96
-  acceleration: 0
+  acceleration: 20
   moveSpeed: 8
-  attackRange: 0
+  attackRange: 30
   attack: 10
   Aromor: 0
 --- !u!212 &212126711359586246

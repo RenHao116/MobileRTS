@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class GameController : MonoBehaviour
     HashSet<GameObject>[] AllThings = new HashSet<GameObject>[3];
     public float timeElapsed = 0;
     // Use this for initialization
+
+    public Text statusTextField;
 
     private void Awake()
     {
@@ -21,13 +24,20 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-
+        statusTextField.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         timeElapsed += Time.deltaTime;
+        if(AllThings[(int)Team.up].Count <= 1){
+            statusTextField.enabled = true;
+            statusTextField.text = "Defeated";
+        }else if(AllThings[(int)Team.down].Count == 0){
+            statusTextField.enabled = true;
+            statusTextField.text = "Vectory";
+        }
     }
 
     // get oppoent units

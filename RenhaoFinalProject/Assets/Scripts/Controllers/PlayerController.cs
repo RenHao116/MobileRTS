@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     public BuildLock[] locks;
     public BuildLock currentLock;
 
+    public Text MoneyTextField;
 
     public float money = 0;
 
@@ -41,6 +43,8 @@ public class PlayerController : MonoBehaviour {
             }
         }
         //Debug.Log(buildLock);
+
+        MoneyTextField.text = "Money: " + money;
 
 	}
 

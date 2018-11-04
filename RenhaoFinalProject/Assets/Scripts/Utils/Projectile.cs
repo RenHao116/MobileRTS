@@ -30,7 +30,6 @@ public class Projectile : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rigidbody = GetComponent<Rigidbody2D>();
-        gameObject.layer = LayerMask.NameToLayer("TeamUPProjectile");
     }
 
 	
@@ -40,6 +39,8 @@ public class Projectile : MonoBehaviour {
             Vector2 directionToTarget = target.transform.position - transform.position;
             float angle = Mathf.Atan2(directionToTarget.y,directionToTarget.x)*Mathf.Rad2Deg;
             rigidbody.MoveRotation(angle);
+        }else{
+            Destroy(gameObject);
         }
         rigidbody.AddForce(transform.right*acceleration);
         rigidbody.velocity = Vector2.ClampMagnitude(rigidbody.velocity,maxSpeed);

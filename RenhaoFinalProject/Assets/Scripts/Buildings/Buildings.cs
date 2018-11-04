@@ -9,6 +9,10 @@ public class Buildings : Thing {
 
     public bool canBuild;
     public float nextBuildTime = 0;
+
+    public float spawnDelay;
+    public float minSpwanDelay = 0.5f;
+    public float maxSpwanDelay = 10f;
     // Use this for initialization
     new protected void Start () {
         base.Start();
@@ -30,6 +34,10 @@ public class Buildings : Thing {
             //canBuild = true;
             return 0;
         };
+        if (team == Team.down)
+        {
+            StartCoroutine("SpawnUnitsWithDelay");
+        }
 
     }
 	
@@ -42,5 +50,26 @@ public class Buildings : Thing {
             builder.TryBuild(ref nextBuildTime);
         }
 
+
+        if(team == Team.down){
+            float decreaseOverTime = maxSpwanDelay - ((maxSpwanDelay - minSpwanDelay) / 30f * gameController.timeElapsed);
+            spawnDelay = Mathf.Clamp(decreaseOverTime, minSpwanDelay, maxSpwanDelay);
+            //UpdateDisplay();
+        }
+
+    }
+
+
+    // Enemy auto generation code
+    void SpawnUnits(){
+        GameObject newUnit = things[Random.Range(0, things.Length)];
+        GameObject generatedObject =  Instantiate(newUnit, gameObject.transform.position, Quaternion.identity);
+        Thing thingScript = generatedObject.GetComponent<Thing>();
+        thingScript.team = Team.down;
+    }
+    IEnumerator SpawnUnitsWithDelay(){
+        yield return new WaitForSeconds(spawnDelay);
+        SpawnUnits();
+        StartCoroutine("SpawnUnitsWithDelay");
     }
 }

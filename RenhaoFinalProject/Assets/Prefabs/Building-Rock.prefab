@@ -186,7 +186,7 @@ MonoBehaviour:
   team: 0
   life: 200
   cost: 100
-  constructionTime: 5
+  constructionTime: 0
   visionRange: 0
   projectilePrefab: {fileID: 1356021027709812, guid: 1eadbcc2a651144cb893f9083a91fb6d,
     type: 2}
@@ -200,6 +200,10 @@ MonoBehaviour:
   things:
   - {fileID: 1893258046041156, guid: 7e67cd99fc3ac43e4a60436db7aaa2b0, type: 2}
   canBuild: 1
+  nextBuildTime: 0
+  spawnDelay: 0
+  minSpwanDelay: 6
+  maxSpwanDelay: 10
 --- !u!212 &212849830806918114
 SpriteRenderer:
   m_ObjectHideFlags: 1

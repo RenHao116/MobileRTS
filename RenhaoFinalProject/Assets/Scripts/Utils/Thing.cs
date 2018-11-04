@@ -64,6 +64,8 @@ public class Thing : MonoBehaviour {
             if (directionToTarget.sqrMagnitude <= attackRange * attackRange)
             {
                 GameObject projectileObject = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+                if (team == Team.up) projectileObject.layer = LayerMask.NameToLayer("TeamUPProjectile");
+                else projectileObject.layer = LayerMask.NameToLayer("TeamDownProjectile");
                 Projectile projectileScript = projectileObject.GetComponent<Projectile>();
                 projectileScript.target = target;
                 projectileScript.damage = attack;
